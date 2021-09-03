@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap");
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .intro {
+  background: black;
+  color: white;
+}
+
+header .intro__announce {
+  text-align: center;
+  padding: 0.8rem;
+}
+
+header .intro__announce--earnings {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-color: white;
+          text-decoration-color: white;
+  text-underline-offset: 2px;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    flex-direction: column;
+
+    .intro {
+        background: black;
+        color: white;
+        &__announce {
+            text-align: center;
+            padding: 0.8rem;
+            
+            &--earnings {
+                text-decoration-line: underline;
+                text-decoration-color: white;
+                text-underline-offset: 2px;
+            }
+        }
+    }
+}
