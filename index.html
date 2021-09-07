@@ -52,7 +52,28 @@
                             <button class="btn subscribe--btn">Get Started</button>
                         </div>
                     </div>
-                    <div class="presentation__bloc--img"></div>
+                    <picture class="presentation__bloc--img">
+                        <source 
+                            media="(max-width: 768px)" 
+                            srcset="/Assets/Hero_Image-Mobile.png">
+                        <source 
+                            media="(max-width: 992px)" 
+                            srcset="/Assets/Hero_Image-Tablet.png">
+                        <source 
+                            media="(min-width: 993px"
+                            srcset="/Assets/Hero_Image-Desktop.png">
+                        <img src="/Assets/Hero_Image-Desktop.png" alt="image presentation">
+                    </picture>
+                    <!-- <div class="presentation__bloc--img">
+                        <img srcset="/Assets/Hero_Image-Desktop.png 1276w,
+                                     /Assets/Hero_Image-Tablet.png 2064w,
+                                     /Assets/Hero_Image-Mobile.png 1112w" 
+                             sizes="(min- width: 993px) 50vw,
+                                    (max-width: 992px) 80vw,
+                                    (max-width: 768px) 80vw"
+                             src="/Assets/Hero_Image-Desktop.png"
+                             alt="image_presentation">
+                    </div> -->
                 </div>
             </div>
         </header>
@@ -67,14 +88,48 @@
             <img src="Assets/Slack Logo.png" alt="slack" class="slack">
         </section>
         <section class="escrow">
-            <div class="escrow--text"></div>
-            <div class="escrow-img"></div>
+            <div class="escrow--text">
+                <h1 class="sous-titre">Secure your money <br/>with Escrow.</h1>
+                <p class="paragraphe" >Spense uses Escrow to secure all payments. We believe <br/>Escrow offers the highest level of security for yout payments,<br/>so you never need to worry about scams.</p>
+                <a class="lien" href="#" class="escrow--text--learn">Learn more about Escrow   &#8594;</a>
+            </div>
         </section>
         <section class="editor">
             <div class="editor--img"></div>
-            <div class="editor--text"></div>
+            <div class="editor--text">
+                <h1 class="sous-titre" >A text editor like no other</h1>
+                <p class="paragraphe" >Our text editor pulls you into focus mode with it's simplistic<br/>design and usability so you can put out your best writings.</p>
+                <a class="lien" href="#">Text Editor Live Demo    &#8594;</a>
+            </div>
         </section>
-        <footer></footer>
+        <footer>
+            <div class="footer__container">
+                <div class="footer__col1 column">
+                    <h4>spense.</h4>
+                    <p>Spense is an open platform for individuals to<br/>share their unfiltered thoughts. Discuss the<br/>topics you love, and get paid for doing <em>just</em> that.</p>
+                </div>
+                <ul class="footer__col2 column">
+                    <h3>Sitemap</h3>
+                    <li>Homepage</li>
+                </ul>
+                <ul class="footer__col3 column">
+                    <h3>Ressources</h3>
+                    <li>Support</li>
+                    <li>Contact</li>
+                    <li>FAQ</li>
+                </ul>
+                <ul class="footer__col4 column">
+                    <h3>Company</h3>
+                    <li>About</li>
+                    <li>Customers</li>
+                    <li>Blog</li>
+                </ul>
+                <ul class="footer__col5 column">
+                    <h3>Opportunities</h3>
+                    <li>Jobs</li>
+                </ul>
+             </div>
+        </footer>
     </div>
 </body>
 </html>

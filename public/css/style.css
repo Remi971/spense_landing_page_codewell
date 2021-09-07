@@ -7,6 +7,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #F0EEEB;
+  width: 100%;
 }
 
 header .intro {
@@ -28,10 +30,16 @@ header .intro__announce--earnings {
 }
 
 .presentation {
-  background-color: #F0EEEB;
   width: 1200px;
   margin: auto;
   margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1250px) {
+  .presentation {
+    width: 100%;
+    padding: 1rem;
+  }
 }
 
 .presentation .navbar {
@@ -45,6 +53,13 @@ header .intro__announce--earnings {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 1250px) {
+  .presentation .navbar {
+    margin: 2rem;
+  }
 }
 
 .presentation .navbar__logo--text {
@@ -81,8 +96,23 @@ header .intro__announce--earnings {
           align-items: center;
 }
 
+@media (max-width: 992px) {
+  .presentation__bloc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .presentation__bloc--text {
   width: 55%;
+}
+
+@media (max-width: 992px) {
+  .presentation__bloc--text {
+    width: 100%;
+  }
 }
 
 .presentation__bloc--text h1 {
@@ -116,15 +146,6 @@ header .intro__announce--earnings {
   font-size: 0.8rem;
 }
 
-.presentation__bloc--img {
-  height: 590px;
-  background-image: url("/Assets/Hero_Image-Desktop.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 40%;
-  margin: 0.5rem;
-}
-
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,6 +164,122 @@ header .intro__announce--earnings {
   margin: 1.5rem;
 }
 
+.escrow {
+  background-color: #F0EEEB;
+  width: 1200px;
+  margin: 4rem auto;
+  background-image: url("/Assets/Phone Mockup (Desktop).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  border-radius: 0.30rem;
+}
+
+@media (max-width: 1250px) {
+  .escrow {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.sous-titre {
+  font-size: 2.8rem;
+  padding: 1rem;
+}
+
+.paragraphe {
+  padding: 0 1rem 1rem 1rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.lien {
+  padding: 1rem;
+  color: black;
+  cursor: pointer;
+  font-weight: 800;
+  color: #333333;
+}
+
+.editor {
+  background-color: white;
+  width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding: 2rem;
+}
+
+@media (max-width: 1250px) {
+  .editor {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.editor--img {
+  background-image: url("/Assets/Text Editor.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 350px;
+}
+
+footer {
+  background-color: black;
+  padding: 1rem;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 1250px) {
+  .footer__container {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.footer__container .column {
+  margin: 1rem;
+}
+
+.footer__container h4, .footer__container h3 {
+  color: white;
+  margin: 1rem;
+}
+
+.footer__container p, .footer__container li {
+  color: gray;
+  margin: 1rem;
+}
+
+.footer__container p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.footer__container ul {
+  list-style: none;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
 .btn {
   padding: 0.75rem 1.25rem;
   background-color: black;
@@ -151,6 +288,7 @@ header .intro__announce--earnings {
   border: none;
   margin: 0.5rem;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 * {
@@ -159,6 +297,12 @@ header .intro__announce--earnings {
 
 body {
   font-family: 'Cabin', sans-serif;
-  background-color: #F0EEEB;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */

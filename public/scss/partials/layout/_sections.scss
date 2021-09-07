@@ -1,0 +1,67 @@
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: white;
+
+    img {
+        width: 6rem;
+        margin: 1.5rem;
+    }
+}
+
+.escrow {
+    background-color: #F0EEEB;
+    width: 1200px;
+    margin: 4rem auto;
+    background-image: url("/Assets/Phone Mockup (Desktop).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    border-radius: 0.30rem;
+    @media (max-width: 1250px) {
+        width: 100%; 
+        padding: 1rem;   
+    }
+}
+
+.sous-titre {
+    font-size: 2.8rem;
+    padding: 1rem;
+}
+
+.paragraphe {
+    padding: 0 1rem 1rem 1rem;
+    line-height: 1.5;
+    color: $grey;
+}
+
+.lien {
+    padding: 1rem;
+    color: black;
+    cursor: pointer;
+    font-weight: 800;
+    color: $grey;
+}
+
+.editor {
+    background-color: white;
+    width: 1200px;
+    @media (max-width: 1250px) {
+        width: 100%; 
+        padding: 1rem;   
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 2rem;
+    &--img {
+        background-image: url("/Assets/Text Editor.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 50%;
+        height: 350px;
+    }
+}
