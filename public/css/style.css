@@ -27,11 +27,138 @@ header .intro__announce--earnings {
   text-underline-offset: 2px;
 }
 
+.presentation {
+  background-color: #F0EEEB;
+  width: 1200px;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+
+.presentation .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 2rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.presentation .navbar__logo--text {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.presentation .navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.presentation .navbar__menu--links {
+  width: 8rem;
+  font-weight: bold;
+}
+
+.presentation .navbar__start--login {
+  font-weight: bold;
+}
+
+.presentation__bloc {
+  height: 590px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.presentation__bloc--text {
+  width: 55%;
+}
+
+.presentation__bloc--text h1 {
+  font-size: 3.5rem;
+}
+
+.presentation__bloc--text p {
+  line-height: 1.8;
+  margin: 0.5rem 0;
+}
+
+.presentation__bloc--text .markList__mark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 0;
+}
+
+.presentation__bloc--text .markList__mark h4 {
+  margin: 0 1rem;
+  color: #333333;
+}
+
+.presentation__bloc--text input {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.30rem;
+  border: 1px solid gray;
+  font-size: 0.8rem;
+}
+
+.presentation__bloc--img {
+  height: 590px;
+  background-image: url("/Assets/Hero_Image-Desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40%;
+  margin: 0.5rem;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.logo img {
+  width: 6rem;
+  margin: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  background-color: black;
+  color: white;
+  border-radius: 0.30rem;
+  border: none;
+  margin: 0.5rem;
+  font-size: 0.8rem;
+}
+
 * {
   margin: 0;
 }
 
 body {
   font-family: 'Cabin', sans-serif;
+  background-color: #F0EEEB;
 }
 /*# sourceMappingURL=style.css.map */
