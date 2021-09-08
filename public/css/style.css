@@ -27,17 +27,23 @@ header .intro__announce--earnings {
   -webkit-text-decoration-color: white;
           text-decoration-color: white;
   text-underline-offset: 2px;
+  cursor: pointer;
 }
 
 .presentation {
-  width: 1200px;
   margin: auto;
   margin-bottom: 2.5rem;
 }
 
+@media (min-width: 1251px) {
+  .presentation {
+    width: 1200px;
+  }
+}
+
 @media (max-width: 1250px) {
   .presentation {
-    width: 100%;
+    width: 95%;
     padding: 1rem;
   }
 }
@@ -53,13 +59,7 @@ header .intro__announce--earnings {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-}
-
-@media (max-width: 1250px) {
-  .presentation .navbar {
-    margin: 2rem;
-  }
+  max-width: 100%;
 }
 
 .presentation .navbar__logo--text {
@@ -72,11 +72,36 @@ header .intro__announce--earnings {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  height: 100%;
 }
 
 .presentation .navbar__menu--links {
   width: 8rem;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
   font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+}
+
+.presentation .navbar__menu--links::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  background: black;
+  opacity: 0.1;
+  -webkit-transition: all ease-in-out .4s;
+  transition: all ease-in-out .4s;
+}
+
+.presentation .navbar__menu--links:hover::before {
+  height: 100%;
 }
 
 .presentation .navbar__start--login {
@@ -84,39 +109,64 @@ header .intro__announce--earnings {
 }
 
 .presentation__bloc {
-  height: 590px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-@media (max-width: 992px) {
+@media (min-width: 993px) {
   .presentation__bloc {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
-.presentation__bloc--text {
-  width: 55%;
+@media (max-width: 992px) {
+  .presentation__bloc {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .presentation__bloc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: 993px) {
+  .presentation__bloc--text {
+    width: 55%;
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 992px) {
   .presentation__bloc--text {
-    width: 100%;
+    width: 80%;
   }
 }
 
-.presentation__bloc--text h1 {
-  font-size: 3.5rem;
+@media (min-width: 993px) {
+  .presentation__bloc--text h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .presentation__bloc--text h1 {
+    width: 95%;
+    font-size: 2.5rem;
+  }
 }
 
 .presentation__bloc--text p {
@@ -144,6 +194,44 @@ header .intro__announce--earnings {
   border-radius: 0.30rem;
   border: 1px solid gray;
   font-size: 0.8rem;
+}
+
+.presentation__bloc--img {
+  margin: 0.5rem;
+}
+
+@media screen and (min-width: 993px) {
+  .presentation__bloc--img {
+    width: 50%;
+    height: 700px;
+    background-image: url("/Assets/Hero_Image-Desktop.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .presentation__bloc--img {
+    width: 90%;
+    height: 500px;
+    background-image: url("/Assets/Hero_Image-Tablet.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .presentation__bloc--img {
+    width: 100%;
+    height: 590px;
+    background-image: url("/Assets/Hero_Image-Mobile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .logo {
@@ -289,6 +377,13 @@ footer {
   margin: 0.5rem;
   font-size: 0.8rem;
   cursor: pointer;
+  -webkit-transition: all ease .4s;
+  transition: all ease .4s;
+}
+
+.btn:hover {
+  background-color: #b3b3b3;
+  color: black;
 }
 
 * {

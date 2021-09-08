@@ -7,4 +7,11 @@
     margin: 0.5rem;
     font-size: 0.8rem;
     cursor: pointer;
+    transition: all ease .4s;
+
+    &:hover {
+        background-color: darken(white, 30%);
+        color:black;
+    }
 }
+

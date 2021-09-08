@@ -1,5 +1,28 @@
 $bg: #F0EEEB;
 $grey: lighten($color: #000000, $amount: 20%);
+
+@mixin link-navbar {
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        height: 0;
+        background: black;
+        opacity: 0.1;
+        transition: all ease-in-out .4s;
+        
+    }
+    &:hover{
+        &::before {
+            height: 100%;
+        }
+    }
+    
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -16,27 +39,27 @@ header {
                 text-decoration-line: underline;
                 text-decoration-color: white;
                 text-underline-offset: 2px;
+                cursor: pointer;
             }
         }
     }
 }
 .presentation {
-    width: 1200px;
+    @media (min-width: 1251px) {
+        width: 1200px;
+    }
     @media (max-width: 1250px) {
-        width: 100%; 
+        width: 95%; 
         padding: 1rem;   
     }
     margin: auto;
     margin-bottom: 2.5rem;
     .navbar {
         display: flex;
-        @media (max-width: 1250px) {
-            margin: 2rem;  
-        }
         justify-content: space-between;
         margin: 2rem 0;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         &__logo--text {
             font-size: 1.5rem;
             font-weight: 900;
@@ -45,9 +68,18 @@ header {
         &__menu {
             display: flex;
             list-style: none;
+            height: 100%;
             &--links {
                 width: 8rem;
+                padding: 1rem;
+                text-align: center;
+                vertical-align: middle;
+                height: 100%;
                 font-weight: bold;
+                position: relative;
+                cursor: pointer;
+
+                @include link-navbar;
             }
         }
 
@@ -56,20 +88,38 @@ header {
         }
     }
     &__bloc {
-        height: 590px;
+        //height: 590px;
         display: flex;
-        justify-content: space-between;
+        margin: auto;
+        @media (min-width: 993px) {
+            justify-content: space-between;
+        }
+        @media (max-width: 992px) {
+            justify-content: center;
+        }
+        
         align-items: center;
         @media (max-width: 992px) {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
         &--text {
-            @media (max-width: 992px) {
-                width: 100%;
+            @media (min-width: 993px) {
+                width: 55%;
+                padding: 1rem;
             }
-            width: 55%;
+            @media (max-width: 992px) {
+                width: 80%;
+            }
+            
+            
             h1 {
-                font-size: 3.5rem;
+                @media (min-width: 993px) {
+                    font-size: 3.5rem;
+                }
+                @media (max-width: 992px) {
+                    width: 95%;
+                    font-size: 2.5rem;
+                }
             }
             p {
                 line-height: 1.8;
@@ -92,13 +142,35 @@ header {
                 font-size: 0.8rem;
             }
         }
-        // &--img {
-        //     height: 590px;
-        //     background-image: url("/Assets/Hero_Image-Desktop.png");
-        //     background-size: contain;
-        //     background-repeat: no-repeat;
-            
-        //     margin: 0.5rem;
-        // }
+        &--img {
+            @media screen and (min-width: 993px) {
+                width: 50%;
+                height: 700px;
+                background-image: url("/Assets/Hero_Image-Desktop.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @media screen and (max-width: 992px) and (min-width: 768px) {
+                width: 90%;
+                height: 500px;
+                background-image: url("/Assets/Hero_Image-Tablet.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin: 1rem;
+            }
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                height: 590px;
+                background-image: url("/Assets/Hero_Image-Mobile.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            margin: 0.5rem;
+        }
     }
 }
+
+

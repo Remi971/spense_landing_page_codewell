@@ -19,9 +19,9 @@
                 <nav class="navbar">
                     <div class="navbar__logo"><span class="navbar__logo--text">spense.</span></div>
                     <ul class="navbar__menu">
-                        <li class="navbar__menu--links">Business</li>
-                        <li class="navbar__menu--links">Pricing</li>
-                        <li class="navbar__menu--links">Features</li>
+                        <li class="navbar__menu--links" id="Business" >Business</li>
+                        <li class="navbar__menu--links" id="Pricing" >Pricing</li>
+                        <li class="navbar__menu--links" id="Features" >Features</li>
                     </ul>
                     <div class="navbar__start">
                         <span class=navbar__start--login>Login</span>
@@ -52,28 +52,7 @@
                             <button class="btn subscribe--btn">Get Started</button>
                         </div>
                     </div>
-                    <picture class="presentation__bloc--img">
-                        <source 
-                            media="(max-width: 768px)" 
-                            srcset="/Assets/Hero_Image-Mobile.png">
-                        <source 
-                            media="(max-width: 992px)" 
-                            srcset="/Assets/Hero_Image-Tablet.png">
-                        <source 
-                            media="(min-width: 993px"
-                            srcset="/Assets/Hero_Image-Desktop.png">
-                        <img src="/Assets/Hero_Image-Desktop.png" alt="image presentation">
-                    </picture>
-                    <!-- <div class="presentation__bloc--img">
-                        <img srcset="/Assets/Hero_Image-Desktop.png 1276w,
-                                     /Assets/Hero_Image-Tablet.png 2064w,
-                                     /Assets/Hero_Image-Mobile.png 1112w" 
-                             sizes="(min- width: 993px) 50vw,
-                                    (max-width: 992px) 80vw,
-                                    (max-width: 768px) 80vw"
-                             src="/Assets/Hero_Image-Desktop.png"
-                             alt="image_presentation">
-                    </div> -->
+                    <div class="presentation__bloc--img"></div>
                 </div>
             </div>
         </header>
