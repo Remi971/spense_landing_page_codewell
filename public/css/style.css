@@ -197,6 +197,8 @@ header .intro__announce--earnings {
 }
 
 .presentation__bloc--img {
+  -webkit-transition: background-image ease .4s, height ease .3s;
+  transition: background-image ease .4s, height ease .3s;
   margin: 0.5rem;
 }
 
@@ -213,7 +215,7 @@ header .intro__announce--earnings {
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
   .presentation__bloc--img {
-    width: 90%;
+    width: 100%;
     height: 500px;
     background-image: url("/Assets/Hero_Image-Tablet.png");
     background-size: contain;
@@ -238,13 +240,24 @@ header .intro__announce--earnings {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: white;
+}
+
+@media (min-width: 1131px) {
+  .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 1130px) {
+  .logo {
+    overflow-x: auto;
+  }
 }
 
 .logo img {
@@ -254,13 +267,27 @@ header .intro__announce--earnings {
 
 .escrow {
   background-color: #F0EEEB;
-  width: 1200px;
-  margin: 4rem auto;
-  background-image: url("/Assets/Phone Mockup (Desktop).png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 1rem;
   border-radius: 0.30rem;
+}
+
+@media (min-width: 993px) and (max-width: 1250px) {
+  .escrow {
+    width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    background-image: url("/Assets/Phone Mockup (Desktop).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 992px) {
+  .escrow {
+    background-image: url("/Assets/Phone Mockup (Desktop).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 95%;
+  }
 }
 
 @media (max-width: 1250px) {
@@ -399,5 +426,26 @@ body {
 .container {
   width: 100%;
   margin: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Track */
+  /* Handle */
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  /* Handle on hover */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 /*# sourceMappingURL=style.css.map */
