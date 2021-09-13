@@ -270,7 +270,7 @@ header .intro__announce--earnings {
   border-radius: 0.30rem;
 }
 
-@media (min-width: 993px) and (max-width: 1250px) {
+@media (min-width: 1250px) {
   .escrow {
     width: 1200px;
     margin: auto;
@@ -281,19 +281,46 @@ header .intro__announce--earnings {
   }
 }
 
-@media (min-width: 992px) {
+@media (max-width: 1249px) and (min-width: 993px) {
   .escrow {
     background-image: url("/Assets/Phone Mockup (Desktop).png");
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 1rem;
+    margin: auto;
     width: 95%;
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 992px) and (min-width: 768px) {
   .escrow {
-    width: 100%;
+    background-image: url("/Assets/Phone Mockup (Tablet).png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
     padding: 1rem;
+    height: 700px;
+    margin: auto;
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .escrow {
+    background-image: url("/Assets/Phone Mockup (Mobile).png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding: 1rem;
+    height: 900px;
+    margin: auto;
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .escrow--text {
+    padding: 3rem;
   }
 }
 
@@ -343,8 +370,29 @@ header .intro__announce--earnings {
   background-image: url("/Assets/Text Editor.png");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 50%;
-  height: 350px;
+}
+
+@media (max-width: 993px) {
+  .editor--img {
+    width: 50%;
+    height: 350px;
+  }
+}
+
+@media (min-width: 992px) {
+  .editor--img {
+    width: 90%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 993px) {
+  .editor {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 footer {

@@ -18,7 +18,8 @@
 
 .escrow {
     background-color: #F0EEEB;
-    @media (min-width: 993px) and (max-width: 1250px) {
+    border-radius: 0.30rem;
+    @media (min-width: 1250px) {
         width: 1200px;
         margin: auto;
         padding: 1rem;
@@ -26,20 +27,43 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    @media (min-width: 992px) {
+    @media (max-width: 1249px) and (min-width: 993px) {
         background-image: url("/Assets/Phone Mockup (Desktop).png");
         background-size: cover;
         background-repeat: no-repeat;
+        padding: 1rem;
+        margin: auto;
         width: 95%;
     }
-    
-    
-    border-radius: 0.30rem;
-    @media (max-width: 1250px) {
-        width: 100%; 
-        padding: 1rem;   
+    @media (max-width: 992px) and (min-width: 768px) {
+        background-image: url("/Assets/Phone Mockup (Tablet).png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        padding: 1rem;
+        height: 700px;
+        margin: auto;
+        width: 90%;
+    }
+    @media (max-width: 767px) {
+        background-image: url("/Assets/Phone Mockup (Mobile).png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        padding: 1rem;
+        height: 900px;
+        margin: auto;
+        width: 90%;
+    }
+
+    &--text {
+        @media (max-width: 992px) and (min-width: 768px) {
+            padding: 3rem;
+        }
     }
 }
+
+
 
 .sous-titre {
     font-size: 2.8rem;
@@ -76,7 +100,17 @@
         background-image: url("/Assets/Text Editor.png");
         background-size: cover;
         background-repeat: no-repeat;
-        width: 50%;
-        height: 350px;
+        @media (max-width: 993px) {
+            width: 50%;
+            height: 350px;
+        }
+        @media (min-width: 992px) {
+            width: 90%;
+            height: 400px;
+        }
+        
+    }
+    @media (max-width: 993px) {
+        flex-direction: column;
     }
 }
